@@ -4969,8 +4969,8 @@ GameObject:
   - component: {fileID: 70682330}
   - component: {fileID: 70682331}
   - component: {fileID: 70682332}
-  - component: {fileID: 70682333}
   - component: {fileID: 70682334}
+  - component: {fileID: 70682335}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5053,7 +5053,7 @@ MonoBehaviour:
   laneDistance: 5
   laneChangeSpeed: 50
   canMove: 1
---- !u!114 &70682333
+--- !u!114 &70682334
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5062,22 +5062,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 70682328}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3829c068ae2137c4cbc6c724fc142d7e, type: 3}
+  m_Script: {fileID: 11500000, guid: 475e77afdb5efa54e94e789808edb824, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 70682330}
-  pathPoints:
-  - {fileID: 1782581342}
-  - {fileID: 618174161}
-  - {fileID: 1751061014}
-  - {fileID: 157080685}
-  - {fileID: 1781832795}
-  forwardSpeed: 10
-  laneDistance: 5
-  laneChangeSpeed: 50
-  rotationSpeed: 5
-  pointReachDistance: 1.5
---- !u!114 &70682334
+  forwardSpeed: 5
+--- !u!114 &70682335
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5086,10 +5075,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 70682328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 475e77afdb5efa54e94e789808edb824, type: 3}
+  m_Script: {fileID: 11500000, guid: e963fb0f16c01fd4493a7fc65f17f531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  forwardSpeed: 5
+  shootCamera: {fileID: 963194227}
+  shootRange: 100
+  shootCooldown: 0.2
+  shootKey: 8
+  enableMouseShooting: 1
+  showDebugLog: 1
+  showDebugRay: 1
+  debugRayDuration: 2
 --- !u!1001 &72304714
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28385,6 +28381,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4247511293763610, guid: 34c65acd7feb107489a71157e525c9e7, type: 3}
   m_PrefabInstance: {fileID: 469193023}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &469865271
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469865273}
+  - component: {fileID: 469865272}
+  m_Layer: 0
+  m_Name: VirusSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &469865272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469865271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 309ff7d1a23af974eb0dd179f5a8a331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  virusPrefab: {fileID: 6785667503401686170, guid: 0a66595012da7814f9092eabe959a048, type: 3}
+  player: {fileID: 70682329}
+  spawnDistance: 16.36
+  spawnHeightOffset: 1
+  minimumSpawnDistance: 2
+  virusRadius: 0.6
+  wallClearance: 0.8
+  environmentMask:
+    serializedVersion: 2
+    m_Bits: 0
+  spawnKey: 118
+--- !u!4 &469865273
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469865271}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.54268706, y: 5.8566995, z: 28.798325}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &471783130
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -139285,3 +139336,4 @@ SceneRoots:
   - {fileID: 1968723613}
   - {fileID: 1256814194}
   - {fileID: 1354603637}
+  - {fileID: 469865273}

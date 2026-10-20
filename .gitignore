@@ -1,0 +1,29 @@
+
+# Unity cache
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Bb]uild/
+[Bb]uilds/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+
+# Windows
+Thumbs.db
+.DS_Store
+
+# Firebase private credentials
+*serviceAccountKey*.json
+*service-account*.json

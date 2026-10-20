@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "317939129488",
+    "firebase_url": "https://virusgame-c7baa-default-rtdb.firebaseio.com",
+    "project_id": "virusgame-c7baa",
+    "storage_bucket": "virusgame-c7baa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317939129488:android:e55809a937556e3f0a4c15",
+        "android_client_info": {
+          "package_name": "com.yourname.virusgame"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsrBluso4-aSCMXAGv7f7HoAdF34mMol4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
